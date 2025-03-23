@@ -1,0 +1,37 @@
+:root {
+	--red-wine:rgb(181, 0, 0);
+	--red-wine-dark:rgb(131, 0, 0);
+}
+
+.transition {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+	pointer-events: none;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.transition-row {
+	flex: 1;
+	display: flex;
+}
+
+.transition-row.row-1 .block {
+	transform-origin: top;
+}
+
+.transition-row.row-2 .block {
+	transform-origin: bottom;
+}
+
+.block {
+	flex: 1;
+	background-color: var(--red-wine-dark);
+	transform: scaleY(1);
+	will-change: transform;
+}

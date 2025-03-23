@@ -5,20 +5,39 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="/css/marquee.css">
 	<link rel="stylesheet" href="/css/index.css">
+	<link rel="stylesheet" href="/css/transition.css">
 	<title>Scene Steal</title>
 </head>
 <body>
+	<div class="transition">
+		<div class="transition-row row-1">
+			<div class="block"></div>
+			<div class="block"></div>
+			<div class="block"></div>
+			<div class="block"></div>
+			<div class="block"></div>
+		</div>
+	
+		<div class="transition-row row-2">
+			<div class="block"></div>
+			<div class="block"></div>
+			<div class="block"></div>
+			<div class="block"></div>
+			<div class="block"></div>
+		</div>
+	</div>
+
 	<div class="nav-div">
 		<nav class="nav">
 			<div class="logo-div" >
 				hola amigo 
 			</div>
 			<div class="links-div">
-				<div class="links home"><a href="#">HOME</a></div>
-				<div class="links project"><a href="#">PROJECTS</a></div>
-				<div class="links about"><a href="#">ABOUT</a></div>
-				<div class="links press"><a href="#">PRESS</a></div>
-				<div class="links contact"><a href="#">CONTACTS</a></div>
+					<div class="links home"><a href="/home.html">HOME</a></div>
+					<div class="links project"><a href="/projects.html">PROJECTS</a></div>
+					<div class="links about"><a href="/index.html">ABOUT</a></div>
+					<div class="links press"><a href="#">PRESS</a></div>
+					<div class="links contact"><a href="/contacts.html">CONTACTS</a></div>
 			</div>
 		</nav>
 	</div>
@@ -41,15 +60,9 @@
 	</div>
 
 	<div class="about-div">
-		<div class="container">
-			<div class="header-nav">
-				<span class="nav-item">About Us</span>
-				<span class="nav-item">Our Mission</span>
-				<span class="nav-item">Why Choose Us</span>
-			</div>
-		
+
 			<div class="section">
-				<h2 class="section-title">About Us</h2>
+				<h2 class="section-title">About Us /</h2>
 				<p class="section-content">
 					At GLIDEX, we are passionate storytellers who bring visions to life through stunning visuals and innovative
 					creativity. From high-end fashion photography to dynamic video production, our team is dedicated to
@@ -58,7 +71,7 @@
 			</div>
 		
 			<div class="section">
-				<h2 class="section-title">Our Mission</h2>
+				<h2 class="section-title">Our Mission /</h2>
 				<p class="section-content">
 					To craft unforgettable visual experiences that resonate with audiences, combining artistic excellence with a
 					deep understanding of our clients' unique needs.
@@ -66,27 +79,38 @@
 			</div>
 		
 			<div class="section">
-				<h2 class="section-title">Why Choose Us</h2>
+				<h2 class="section-title">Why Choose Us /</h2>
 				<p class="section-content">
 					At the heart of everything we do is dedication to excellence and client satisfaction. Our collaborative
 					approach ensures that every project is tailored to perfection, reflecting your brand’s vision and goals.
 				</p>
 			</div>
+
+	</div>
+
+<div class="expertise-section">
+	<!-- img -->
+	<div class="expertise-img">
+		<div class="expertise-image">
+			<img src="https://i.pinimg.com/736x/b6/40/d7/b640d7cb7f9b9f6fc0d869012d1b9e79.jpg"
+			class="zoom-image2">
 		</div>
 	</div>
 
-<br>
-	<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum aliquet scelerisque. Cras
-		fermentum elementum dolor sit amet congue. Vivamus nec fringilla ligula. Phasellus non massa eget est varius varius
-		a non orci. Aenean a ante at metus fermentum ornare a vel ligula. Vestibulum rhoncus hendrerit hendrerit.Quisque
-		vestibulum tellus a odio imperdiet sagittis. Etiam suscipit, ipsum non maximus tincidunt, nisl felis vestibulum
-		ante, quis accumsan metus dolor eget tellus. Ut facilisis eleifend ipsum vel maximus. Quisque quis nisi hendrerit,
-		hendrerit eros ac, sagittis elit. Nullam eget semper tellus, ac consectetur quam. Vivamus sit amet nibh semper,
-		pretium nibh in, imperdiet dui. Quisque massa diam, eleifend in convallis a, vehicula fermentum risus. Duis placerat
-		laoreet commodo. Vivamus semper libero gravida risus interdum euismod. Fusce a sagittis tellus, vitae finibus erat.
-		Proin ut faucibus erat. Suspendisse potenti. Nam accumsan pretium ligula ac maximus. Phasellus justo sapien,
-		vehicula non volutpat ut, tristique id orci.
-	</p>
+	<div class="expertise-info">
+		<div class="expertise-header">
+			<h2 class="expertise-title">OUR EXPERTISE /</h2>
+		</div>
+		<div class="expertise-details">
+			<p class="info-details ">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quo ex possimus ipsa ipsam exercitationem dignissimos nihil facilis magnam, iure et natus adipisci aliquam deleniti voluptates rerum fugit pariatur praesentium?
+			</p>
+		</div>
+	</div>
+</div>
+
+
+
 
 <br>
 	<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum aliquet scelerisque. Cras
@@ -271,6 +295,7 @@
 	</p>
 	
 	<!-- scripts -->
+	 <script src="/js/transition.js"></script>
 	<script src="/js/index.js"></script>
 	<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 	<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>

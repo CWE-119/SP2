@@ -2,6 +2,7 @@ console.log("Helo World");
 let lastScrollY = window.scrollY;
 let scale = 1;
 const image = document.querySelector(".zoom-image");
+const image2 = document.querySelector(".zoom-image2");
 const maxScale = 1.1;
 const minScale = 1;
 
@@ -21,6 +22,7 @@ function updateScale() {
 
 	// Apply transform
 	image.style.transform = `scale(${scale})`;
+	image2.style.transform = `scale(${scale})`;
 
 	// Update last scroll position
 	lastScrollY = currentScrollY;
