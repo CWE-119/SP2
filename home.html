@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="/css/index.css">
 		<link rel="stylesheet" href="/css/transition.css">
-	<title>Document</title>
-</head>
-<body>
+		<link rel="stylesheet" href="glide/glide.core.css">
+		<link rel="stylesheet" href="glide/glide.core.min.css">
+		<link rel="stylesheet" href="glide/glide.theme.min.css">
+		<link rel="stylesheet" href="/css/slider.css">
+		<title>HOME</title>
+	</head>
+
+	<body>
 		<div class="transition">
 			<div class="transition-row row-1">
 				<div class="block"></div>
@@ -16,7 +22,7 @@
 				<div class="block"></div>
 				<div class="block"></div>
 			</div>
-		
+
 			<div class="transition-row row-2">
 				<div class="block"></div>
 				<div class="block"></div>
@@ -25,7 +31,7 @@
 				<div class="block"></div>
 			</div>
 		</div>
-		
+
 		<div class="nav-div">
 			<nav class="nav">
 				<div class="logo-div">
@@ -40,13 +46,77 @@
 				</div>
 			</nav>
 		</div>
-	
-	<!-- scripts -->
-	<script src="/js/transition.js"></script>
-	<script src="/js/index.js"></script>
-	<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-	<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-	<script src="js/marquee.js"></script>
 
-</body>
+
+	
+		<!-- slider video -->
+		 <div class="swiper_video_container">
+			<div class="slider_video_title">
+				<h1 class="video_title">Our Crafted Videos</h1>
+			</div>
+					<div class="glide2">
+						<div class="glide__track" data-glide-el="track">
+					
+							<ul class="glide__slides">
+								<li class="glide__slide">
+									<iframe src="https://www.youtube.com/embed/EldiLly8fNQ?si=HwnXhf88Hc1c2ou9&rel=0&?autoplay=1&mute=1"
+										title="YouTube video player" frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+								</li>
+								<li class="glide__slide">
+									<iframe src="https://www.youtube.com/embed/EldiLly8fNQ?si=HwnXhf88Hc1c2ou9&rel=0&?autoplay=1&mute=1"
+										title="YouTube video player" frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+								</li>
+								<li class="glide__slide">
+									<iframe src="https://www.youtube.com/embed/EldiLly8fNQ?si=HwnXhf88Hc1c2ou9&rel=0&autoplay=1&mute=1"
+										title="YouTube video player" frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+								</li>
+							</ul>
+					
+						</div>
+					
+						<div class="glide__arrows" data-glide-el="controls">
+							<button class="glide__arrow glide__arrow--left" data-glide-dir="<">◀</button>
+							<button class="glide__arrow glide__arrow--right" data-glide-dir=">">▶</button>
+						</div>
+					</div>
+		 </div>
+
+		<!-- image slider -->
+		<div class="swipe_image_container">
+			<div class="slider_image_title">
+				<h1 class="image_title">Our Crafted Images</h1>
+			</div>
+			<div class="glide">
+				<div class="glide__track" data-glide-el="track">
+					<ul class="glide__slides">
+						<li class="glide__slide"><img src="https://i.pinimg.com/736x/c1/00/ff/c100ff7d89142b128c2aab99fa912daa.jpg" alt=""></li>
+						<li class="glide__slide"><img src="https://i.pinimg.com/736x/d7/c7/c6/d7c7c6260ba06671431f9d22038c2c5e.jpg" alt=""></li>
+						<li class="glide__slide"><img src="https://i.pinimg.com/736x/79/fe/80/79fe80fb1fa47eef0d543e70201ea598.jpg" alt=""></li>
+						<li class="glide__slide"><img src="https://i.pinimg.com/736x/c7/fd/f2/c7fdf239e1e70cbc60ddcc6575231753.jpg" alt=""></li>
+						<li class="glide__slide"><img src="https://i.pinimg.com/736x/9a/c8/39/9ac8392b0a4e3d2979abce230cab0208.jpg" alt=""></li>
+					</ul>
+				</div>
+
+				<div class="glide__arrows" data-glide-el="controls">
+					<button class="glide__arrow glide__arrow--left" data-glide-dir="<">◀</button>
+					<button class="glide__arrow glide__arrow--right" data-glide-dir=">">▶</button>
+				</div>
+			</div>
+		</div>
+		<!-- scripts -->
+		<script src="/js/transition.js"></script>
+		<script src="/js/index.js"></script>
+		<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+		<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+		<script src="/js/marquee.js"></script>
+		<script src="/glide/glide.js"></script>
+		<script src="/js/slider.js"></script>
+	</body>
+
 </html>

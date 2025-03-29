@@ -1,0 +1,25 @@
+html,body{
+  height: 100vh;
+}
+
+.container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center;   */
+  padding: 15px  ;
+}
+
+.glide__slide {
+  border: 1px solid black;
+
+  line-height: 100px;
+  margin: 0;
+  text-align: center;
+  height: 69vh;
+}
+
+iframe{
+  border-radius: 12px;
+}
