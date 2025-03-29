@@ -531,12 +531,8 @@ body.menu-opened {
   color: var(--light);
   font-size: 48px;
   font-weight: 300;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   line-height: 125%;
-}
-
-.h-link a:hover {
-  color: var(--red-wine);
 }
 
 .video-wrapper {
