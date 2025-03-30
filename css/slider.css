@@ -10,6 +10,7 @@
 
 }
 
+
 .slider_video_title{
 	width: 100%;
 	color: var(--light);
@@ -20,15 +21,21 @@
 	justify-content: center;
 	align-items: center;
 }
+
 .glide__slide{
-	width: 480px;
-    height: 270px;
+	aspect-ratio: 16 / 9;
+
 }
 
 iframe{
 	height: 100%;
-	width: 100%;
-	border: none;
 	border-radius: 12px;
 	padding: 10px;
+}
+
+.image_slide{
+	object-fit: none;
+}
+img{
+	width: 450px;
 }
