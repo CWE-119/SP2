@@ -1,10 +1,10 @@
 new Glide(".glide2", {
 	type: "carousel",
-	startAt: 0,
+	startAt: 1,
 	// autoplay: 2000,
 	// hoverpause: true,
 	perView: 4,
-	// gap: 20,
+	
 	touchRatio: 1,
 	touchAngle: 45,
 	swipeThreshold: 80,

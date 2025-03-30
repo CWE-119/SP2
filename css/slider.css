@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 :root{
 	--link-padding: 20px 32px 20px 32px;
 	--dark-one: rgb(0,0,0);
@@ -10,13 +14,23 @@
 
 }
 
-
-.slider_video_title{
-	width: 100%;
-	color: var(--light);
+.slider_container{
+	margin-left: 20px;
 }
 
-.video_title{
+
+.slider_video_title,
+.slider_image_title{
+	font-family: "Poppins", sans-serif;
+	width: 100%;
+	color: var(--gray-light);
+	font-style: oblique;
+	padding-bottom: 20px;
+	padding-top: 10px;
+}
+
+.video_title,
+.image_title{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -31,6 +45,8 @@ iframe{
 	height: 100%;
 	border-radius: 12px;
 	padding: 10px;
+	margin-left: 30px !important;
+
 }
 
 .image_slide{
