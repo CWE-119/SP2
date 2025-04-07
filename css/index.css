@@ -11,11 +11,11 @@
 	--light: rgb(240, 240, 240);
 	--red-wine-dark:rgb(131, 0, 0);
 	--red-wine:rgb(181, 0, 0);
-
+  --rbga0: rgba(0, 0, 0, 0);
 }
 
 *{
-	background-color: var(--dark-one);
+	/* background-color: var(--dark-one); */
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
@@ -24,6 +24,9 @@
     -webkit-backface-visibility: hidden;
 }
 
+body{
+  	background-color: var(--dark-one);
+}
 
 html::-webkit-scrollbar {
   scrollbar-track-color: brown;
@@ -342,7 +345,7 @@ body.menu-opened {
 }
 
 .menu-text{
-    background-color: var(--red-wine-dark);
+    background-color: var(--rgba0);
 }
 
 
@@ -376,7 +379,7 @@ body.menu-opened {
   right: 2em;
   width: 120px;
   height: 60px;
-  background-color: var(--red-wine-dark);
+  background-color: var(--rgba0);
   border-radius: 8em;
   transition: width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   transform-origin: right;
@@ -394,7 +397,7 @@ body.menu-opened {
   top: 50%;
   left: 30px;
   transform: translateY(-50%);
-  color: var(--light);
+  color: var(--rbga0);
   transition: left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   z-index: 1;
 }
@@ -601,6 +604,181 @@ body.menu-opened {
     visibility: visible;
 }
 
+.footer{
+  color: var(--light);
+  /* column-count: 2;
+  display: flex;
+  flex-direction: column;
+  margin-top:10px; */
+}
+
+cloneable {
+  /* padding: 10px; */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.cursor {
+  z-index: 999;
+  background-color: var(--red-wine);
+  opacity: 0;
+  pointer-events: none;
+  /* color: var(--color-light); */
+  border-radius: .25em;
+  padding: .3em .75em .4em;
+  font-size: 1.15em;
+  line-height: 1.5;
+  transition: opacity .2s;
+  position: fixed;
+  inset: 0% auto auto 0%;
+}
+
+.cursor p{
+  margin: 0px;
+}
+
+.button-row {
+  /* grid-column-gap: .75em; */
+  /* grid-row-gap: .75em; */
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+.button {
+  margin: 5px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  background-color: var(--dark-two);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 99vw;
+  height: 5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  /* padding: 0.8em 1em; */
+  font-family: PP Neue Corp, Arial, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+}
+
+.insta-image{
+  background-image: url(https://cdn-icons-png.flaticon.com/512/87/87390.png);
+  background-size: 50px; /* Control image size */
+  background-repeat: repeat-x; /* Horizontal repeating */
+  background-position: left center;
+  background-origin: content-box;
+  padding-left: 40px; /* Creates gap before first image */
+  gap: 20px;
+}
+
+.instabg:hover{ 
+  /* background-color:rgb(44, 14, 31); */
+  background-color: rgba(193, 53, 132, 0.3);
+}
+
+.insta{
+  background-color: var(--rgba0);
+  color: var(--gray-light);
+  transition: .3s ease;
+}
+
+.insta:hover{
+  color: rgb(193, 53, 132);
+}
+
+.facebook{
+  background-color: var(--rgba0);
+  color: var(--gray-light);
+  transition: .3s ease;
+}
+
+.facebookbg:hover{
+  background-color: rgba(3,75,168,0.3);
+}
+.facebook:hover{
+  color: rgb(3,75,168);
+}
+.youtube{
+  background-color: var(--rgba0);
+  color: var(--gray-light);
+  transition: .3s ease;
+}
+
+.youtubebg:hover{
+  background-color: rgba(255, 0, 0,0.3);
+}
+.youtube:hover{
+  color: rgb(255, 0, 0);
+}
+.linkedin{
+  background-color: var(--rgba0);
+  color: var(--gray-light);
+  transition: .3s ease;
+}
+
+.linkedinbg:hover{
+  background-color: rgba(0, 119, 181,0.3);
+}
+.linkedin:hover{
+  color: rgb(0, 119, 181);
+}
+
+
+.button.secondary {
+  color: var(--light);
+}
+
+.button-bg {
+  z-index: 0;
+  background-color: var(---light);
+  border-radius: .5em;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+}
+
+.button-text {
+  z-index: 1;
+  position: relative;
+}
+
+body:has( [data-cursor]:hover ) .cursor{ opacity: 1; }
+
+
+.button.secondary .button-bg{
+	background-color: var(--color-neutral-700);
+}
+
+.button-bg{
+	transition: transform 0.5s var(--cubic-default);
+}
+
+.button:hover .button-bg{
+	transform: scale(0.95);
+}
+
+.footer-policy{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px;
+  font-size: 20px;
+}
+
+
+ion-icon{
+  font-size: 30px;
+}
 
 @media (max-width: 768px) {
   .visibility{
@@ -658,5 +836,12 @@ body.menu-opened {
   .expertise-image{
     size: 97vw;
     margin-right: 10px;
+  }
+
+  .button-row{
+    flex-direction: column;
+  }
+  .header_span{
+    font-size: 60px;
   }
 }

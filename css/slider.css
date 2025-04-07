@@ -13,7 +13,11 @@
 	--red-wine:rgb(181, 0, 0);
 
 }
-
+li{
+	margin: 0;
+	align-items: center;
+	justify-content: center;
+}
 .slider_video_title,
 .slider_image_title{
 	font-family: "Poppins", sans-serif;
@@ -33,14 +37,16 @@
 
 .glide__slide{
 	aspect-ratio: 16 / 9;
+	margin: 0;
+	align-self: center;
+	justify-self: center;
+	width: 100%;
 
 }
 
 iframe{
 	height: 100%;
 	border-radius: 12px;
-
-
 }
 
 .image_slide{

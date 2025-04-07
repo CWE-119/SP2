@@ -3,8 +3,7 @@ new Glide(".glide2", {
 	startAt: 1,
 	// autoplay: 2000,
 	// hoverpause: true,
-	perView: 4,
-	
+	perView: 3,
 	touchRatio: 1,
 	touchAngle: 45,
 	swipeThreshold: 80,
