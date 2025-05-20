@@ -6,10 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="/css/index.css">
 		<link rel="stylesheet" href="/css/transition.css">
-		<link rel="stylesheet" href="glide/glide.core.css">
-		<link rel="stylesheet" href="glide/glide.core.min.css">
-		<link rel="stylesheet" href="glide/glide.theme.min.css">
-		<link rel="stylesheet" href="/css/slider.css">
+		<link rel="stylesheet" href="/css/home.css">
+
 		<title>HOME</title>
 	</head>
 
@@ -108,107 +106,47 @@
 			</nav>
 		</div>
 
+		<div class="image-list"></div>
+		
+		<!-- script -->
+		<script>
+			const imageContainer = document.querySelector('.image-list');
+
+			// array of image URLs
+			const imageLinks = [
+				"https://i.pinimg.com/736x/d8/9f/4a/d89f4a89a167e80c451a349862afae58.jpg",
+				"https://i.pinimg.com/736x/9c/97/cf/9c97cffbd57f72ecc17a25a21e7d55db.jpg",
+				"https://i.pinimg.com/736x/77/fd/67/77fd677b221076a699055c4e753f3353.jpg",
+				"https://i.pinimg.com/736x/ff/c7/45/ffc74569c281b284f3f196bed5485d80.jpg",
+				"https://i.pinimg.com/736x/de/b9/a2/deb9a2611dbe5e245c227b2de89b5199.jpg",
+				"https://i.pinimg.com/736x/3b/9d/e8/3b9de8eb49075afda77c16261bfc0e7d.jpg",
+				"https://i.pinimg.com/736x/04/f6/fe/04f6fe4e2cc9ac4a999432032bd24584.jpg",
+				"https://i.pinimg.com/736x/4d/51/5b/4d515b2c8dee0d812cacafbddb5e026c.jpg",
+				"https://i.pinimg.com/736x/9e/56/b4/9e56b44d9a8a4941d63400c8dae47657.jpg",
+				"https://i.pinimg.com/736x/92/18/57/921857c95c13669a593da3ded0bf7c6b.jpg",
+				"https://i.pinimg.com/736x/60/5b/59/605b593d179dfb51d3b65662032f04eb.jpg",
+				"https://i.pinimg.com/736x/b4/f3/a3/b4f3a3148f1a6bf620036de74296c18f.jpg",
+				"https://i.pinimg.com/736x/94/3b/aa/943baaa1efb7a8e1045e8c52c93a0511.jpg",
+				"https://i.pinimg.com/736x/7d/07/69/7d0769a90665a0ab630082dc63cc2c91.jpg",
+				"https://i.pinimg.com/736x/f4/eb/92/f4eb9223ef170cb2087a9f79a4675b28.jpg",
+				"https://i.pinimg.com/736x/dc/50/4c/dc504c823177260582ffccad59bd840e.jpg",
+				"https://i.pinimg.com/736x/7c/7a/eb/7c7aeb00aec94c04a2a9a680f35a6ef8.jpg",
+				"https://i.pinimg.com/736x/d4/d5/4c/d4d54c78c728c561b27d74712d1c6bc3.jpg",
+				"https://i.pinimg.com/736x/15/e6/ae/15e6aeba2a2ec915f55d55e61901f0a0.jpg",
+			];
+
+			// loop through the array and create image elements
+			imageLinks.forEach(link => {
+				const img = document.createElement('img');
+				img.src = link;
+				img.alt = 'Image';
+				imageContainer.appendChild(img);
+			});
+		</script>
+		
+		<!-- css -->
 
 
-		<!-- slider video -->
-		<div class="swiper_video_container slider_container">
-			<div class="slider_video_title">
-				<h1 class="video_title">Our Crafted Videos</h1>
-			</div>
-			<div class="glide2">
-				<div class="glide__track video_track" data-glide-el="track">
-
-					<ul class="glide__slides">
-						<li class="glide__slide">
-							<iframe
-								src="https://www.youtube.com/embed/EldiLly8fNQ?si=HwnXhf88Hc1c2ou9&rel=0&?autoplay=1&mute=1"
-								title="YouTube video player" frameborder="0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-						</li>
-						<li class="glide__slide">
-							<iframe
-								src="https://www.youtube.com/embed/EldiLly8fNQ?si=HwnXhf88Hc1c2ou9&rel=0&?autoplay=1&mute=1"
-								title="YouTube video player" frameborder="0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-						</li>
-						<li class="glide__slide">
-							<iframe
-								src="https://www.youtube.com/embed/EldiLly8fNQ?si=HwnXhf88Hc1c2ou9&rel=0&?autoplay=1&mute=1"
-								title="YouTube video player" frameborder="0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-						</li>
-						<li class="glide__slide">
-							<iframe
-								src="https://www.youtube.com/embed/EldiLly8fNQ?si=HwnXhf88Hc1c2ou9&rel=0&?autoplay=1&mute=1"
-								title="YouTube video player" frameborder="0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-						</li>
-						<li class="glide__slide">
-							<iframe
-								src="https://www.youtube.com/embed/EldiLly8fNQ?si=HwnXhf88Hc1c2ou9&rel=0&?autoplay=1&mute=1"
-								title="YouTube video player" frameborder="0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-						</li>
-						<li class="glide__slide">
-							<iframe
-								src="https://www.youtube.com/embed/EldiLly8fNQ?si=HwnXhf88Hc1c2ou9&rel=0&?autoplay=1&mute=1"
-								title="YouTube video player" frameborder="0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-						</li>
-					</ul>
-
-				</div>
-
-				<!-- <div class="glide__arrows" data-glide-el="controls">
-					<button class="glide__arrow glide__arrow--left" data-glide-dir="<">◀</button>
-					<button class="glide__arrow glide__arrow--right" data-glide-dir=">">▶</button>
-				</div> -->
-			</div>
-		</div>
-
-		<!-- image slider -->
-		<div class="swipe_image_container slider_container">
-			<div class="slider_image_title">
-				<h1 class="image_title">Our Crafted Images</h1>
-			</div>
-			<div class="glide">
-				<div class="glide__track" data-glide-el="track">
-					<ul class="glide__slides">
-						<img class="glide__slide image_slide"
-							src="https://i.pinimg.com/736x/c1/00/ff/c100ff7d89142b128c2aab99fa912daa.jpg" alt="">
-						<img class="glide__slide image_slide"
-							src="https://i.pinimg.com/736x/d7/c7/c6/d7c7c6260ba06671431f9d22038c2c5e.jpg" alt="">
-						<img class="glide__slide image_slide"
-							src="https://i.pinimg.com/736x/79/fe/80/79fe80fb1fa47eef0d543e70201ea598.jpg" alt="">
-						<img class="glide__slide image_slide"
-							src="https://i.pinimg.com/736x/c7/fd/f2/c7fdf239e1e70cbc60ddcc6575231753.jpg" alt="">
-						<img class="glide__slide image_slide"
-							src="https://i.pinimg.com/736x/9a/c8/39/9ac8392b0a4e3d2979abce230cab0208.jpg" alt="">
-						<img class="glide__slide image_slide"
-							src="https://i.pinimg.com/736x/c1/00/ff/c100ff7d89142b128c2aab99fa912daa.jpg" alt="">
-						<img class="glide__slide image_slide"
-							src="https://i.pinimg.com/736x/d7/c7/c6/d7c7c6260ba06671431f9d22038c2c5e.jpg" alt="">
-						<img class="glide__slide image_slide"
-							src="https://i.pinimg.com/736x/79/fe/80/79fe80fb1fa47eef0d543e70201ea598.jpg" alt="">
-						<img class="glide__slide image_slide"
-							src="https://i.pinimg.com/736x/c7/fd/f2/c7fdf239e1e70cbc60ddcc6575231753.jpg" alt="">
-						<img class="glide__slide image_slide"
-							src="https://i.pinimg.com/736x/9a/c8/39/9ac8392b0a4e3d2979abce230cab0208.jpg" alt="">
-					</ul>
-				</div>
-
-				<!-- <div class="glide__arrows" data-glide-el="controls">
-					<button class="glide__arrow glide__arrow--left" data-glide-dir="<">◀</button>
-					<button class="glide__arrow glide__arrow--right" data-glide-dir=">">▶</button>
-				</div> -->
-			</div>
-		</div>
 
 		<!-- footer-section -->
 		<footer class="footer">
@@ -271,10 +209,603 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 		<script src="js/marquee.js"></script>
 		<script src="js/menu.js"></script>
-		<script src="/glide/glide.js"></script>
 		<script src="/js/slider.js"></script>
 		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-	</body>
 
+<!-- marquee 2nd experimental -->
+		<!-- <script>
+			class MarqueeKit {
+				constructor(selector, options = {}) {
+					// Default options with user overrides
+					this.options = {
+						images: [],
+						speed: 100,
+						height: 300,
+						imageWidth: 250,
+						gap: 20,
+						pauseOnHover: false,
+						reverse: false,
+						imageScale: 1,
+						borderRadius: 8,
+						...options
+					};
+					// Get the container element
+					this.container =
+						typeof selector === "string" ?
+							document.querySelector(selector) :
+							selector;
+					if (!this.container) {
+						console.error("MarqueeKit: Container element not found");
+						return;
+					}
+					// Animation state variables
+					this.isAnimating = false;
+					this.lastTimestamp = null;
+					this.currentTranslate = 0;
+					this.contentWidth = 0;
+					this.animationFrame = null;
+					this.targetSpeed = this.options.speed;
+					this.currentSpeed = this.options.speed;
+					// Event handlers for cleanup
+					this.boundAnimate = this.animate.bind(this);
+					this.visibilityChangeHandler = this.handleVisibilityChange.bind(this);
+					// Initialize the marquee
+					this.init();
+				}
+				/**
+				 * Initialize the marquee by setting up the container,
+				 * creating the content, calculating dimensions, and starting the animation.
+				 */
+				init() {
+					this.setupContainer();
+					this.createContent();
+				}
+				/**
+				 * Set up the container styles and classes.
+				 */
+				setupContainer() {
+					// Add a class for styling
+					this.container.classList.add("marquee-container");
+					// Set the container height
+					this.container.style.height = `${this.options.height}px`;
+					// Hide overflow to keep the marquee contained
+					this.container.style.overflow = "hidden";
+					// Position relative for absolute positioning of the track
+					this.container.style.position = "relative";
+					// **Create loading overlay**
+					this.loadingOverlay = document.createElement("div");
+					this.loadingOverlay.classList.add("marquee-loading");
+					// **Append loading overlay to the container**
+					this.container.appendChild(this.loadingOverlay);
+				}
+				/**
+				 * Create the marquee content by duplicating images for seamless looping.
+				 */
+				createContent() {
+					// Create the track element
+					this.track = document.createElement("div");
+					this.track.classList.add("marquee-track");
+					// Create image items
+					this.items = this.options.images.map((src) => {
+						const item = document.createElement("div");
+						item.classList.add("marquee-item");
+						item.style.marginRight = `${this.options.gap}px`;
+						const img = document.createElement("img");
+						img.src = src;
+						img.classList.add("marquee-image");
+						img.loading = "lazy";
+						// Apply width, border radius, and transition properties dynamically
+						img.style.width = `${this.options.imageWidth}px`;
+						img.style.height = "100%";
+						img.style.objectFit = "cover";
+						img.style.display = "block";
+						img.style.backfaceVisibility = "hidden";
+						img.style.transform = "translateZ(0)";
+						img.style.transition = "transform 0.3s ease";
+						img.style.borderRadius = `${this.options.borderRadius}px`; // Apply border radius
+						item.appendChild(img);
+						return item;
+					});
+					// Add hover effect dynamically
+					this.container.addEventListener("mouseover", (event) => {
+						if (event.target.classList.contains("marquee-image")) {
+							event.target.style.transform = `scale(${this.options.imageScale})`;
+						}
+					});
+					this.container.addEventListener("mouseout", (event) => {
+						if (event.target.classList.contains("marquee-image")) {
+							event.target.style.transform = "scale(1)";
+						}
+					});
+					// Append items and clones to track for seamless scrolling
+					this.items.forEach((item) => this.track.appendChild(item));
+					this.itemsClone = this.items.map((item) => item.cloneNode(true));
+					this.itemsClone.forEach((item) => this.track.appendChild(item));
+					// Append track to container
+					this.container.appendChild(this.track);
+					// Append items and clones to track for seamless scrolling
+					this.items.forEach((item) => this.track.appendChild(item.cloneNode(true)));
+					this.items.forEach((item) => this.track.appendChild(item.cloneNode(true)));
+					this.items.forEach((item) => this.track.appendChild(item.cloneNode(true)));
+					this.items.forEach((item) => this.track.appendChild(item.cloneNode(true)));
+					// Wait for images to load before starting animation
+					this.waitForImages().then(() => {
+						if (this.loadingOverlay) {
+							this.container.removeChild(this.loadingOverlay);
+							this.loadingOverlay = null;
+						}
+						this.calculateDimensions();
+						this.setupIntersectionObserver();
+						this.setupEventListeners();
+						this.startAnimation();
+					});
+				}
+				/**
+				 * Public method to set the border radius of the images.
+				 * @param {number} radius - The border radius value in pixels.
+				 */
+				setBorderRadius(radius) {
+					this.options.borderRadius = radius;
+					const images = this.container.querySelectorAll(".marquee-image");
+					images.forEach((img) => {
+						img.style.borderRadius = `${radius}px`;
+					});
+				}
+				/**
+				 * Wait for first 7 images to load.
+				 */
+				waitForImages() {
+					const images = Array.from(this.container.querySelectorAll("img")).slice(
+						0,
+						7
+					); // Select only the first 7 images
+					const promises = images.map((img) => {
+						return new Promise((resolve) => {
+							if (img.complete) {
+								resolve();
+							} else {
+								img.onload = img.onerror = resolve;
+							}
+						});
+					});
+					return Promise.all(promises); // Resolve when the first 7 images are loaded
+				}
+				/**
+				 * Calculate the total width of the content for looping.
+				 */
+				calculateDimensions() {
+					// Total width is the sum of the widths of the original items
+					this.contentWidth = this.items.reduce((total, item) => {
+						const style = window.getComputedStyle(item);
+						const marginRight = parseFloat(style.marginRight);
+						return total + item.offsetWidth + marginRight;
+					}, 0);
+					// Set the track width to accommodate both sets of items
+					this.track.style.width = `${this.contentWidth * 4}px`;
+					// Adjust currentTranslate to prevent initial blink
+					if (this.options.reverse) {
+						this.currentTranslate = -this.contentWidth;
+					}
+				}
+				/**
+				 * Debounce function to limit how often a function can run.
+				 */
+				debounce(func, wait) {
+					let timeout;
+					return function (...args) {
+						clearTimeout(timeout);
+						timeout = setTimeout(() => func.apply(this, args), wait);
+					};
+				}
+				/**
+				 * The animation loop that moves the marquee.
+				 * Uses requestAnimationFrame for smooth animations.
+				 */
+				animate(timestamp) {
+					if (!this.isAnimating) return;
+					if (!this.lastTimestamp) {
+						this.lastTimestamp = timestamp;
+					}
+					const elapsed = timestamp - this.lastTimestamp;
+					this.lastTimestamp = timestamp;
+					// Gradually adjust speed towards target speed for smooth stopping
+					const speedDiff = this.targetSpeed - this.currentSpeed;
+					if (Math.abs(speedDiff) > 0.1) {
+						this.currentSpeed += speedDiff * 0.03; // Adjust this factor for slower/faster deceleration
+					} else {
+						this.currentSpeed = this.targetSpeed;
+					}
+					// Calculate movement in pixels
+					const distance = (this.currentSpeed * elapsed) / 1000;
+					this.currentTranslate += this.options.reverse ? distance : -distance;
+					// Adjust currentTranslate to loop seamlessly using modulo
+					const totalWidth = this.contentWidth;
+					if (this.options.reverse) {
+						this.currentTranslate =
+							((this.currentTranslate + totalWidth) % totalWidth) - totalWidth;
+					} else {
+						this.currentTranslate = this.currentTranslate % totalWidth;
+					}
+					// Apply the transform to the track for smooth movement
+					this.track.style.transform = `translate3d(${this.currentTranslate}px, 0, 0)`;
+					this.animationFrame = requestAnimationFrame(this.boundAnimate);
+				}
+				/**
+				 * Set up an IntersectionObserver to pause animation when the marquee is not in view.
+				 */
+				setupIntersectionObserver() {
+					this.observer = new IntersectionObserver(
+						(entries) => {
+							entries.forEach((entry) => {
+								if (entry.isIntersecting) {
+									this.startAnimation();
+								} else {
+									this.stopAnimation();
+								}
+							});
+						}, {
+						threshold: 0.1
+					}
+					);
+					this.observer.observe(this.container);
+				}
+				/**
+				 * Set up event listeners for hover and visibility changes.
+				 */
+				setupEventListeners() {
+					// Smooth pause on hover if enabled
+					if (this.options.pauseOnHover) {
+						this.container.addEventListener("mouseenter", () => this.slowDown());
+						this.container.addEventListener("mouseleave", () => {
+							if (document.visibilityState === "visible") {
+								this.speedUp();
+							}
+						});
+					}
+					// Pause animation when the page is not visible
+					document.addEventListener("visibilitychange", this.visibilityChangeHandler);
+				}
+				/**
+				 * Handle visibility change events.
+				 */
+				handleVisibilityChange() {
+					if (document.visibilityState === "visible") {
+						this.startAnimation();
+					} else {
+						this.stopAnimation();
+					}
+				}
+				/**
+				 * Start the animation loop.
+				 */
+				startAnimation() {
+					if (!this.isAnimating) {
+						this.isAnimating = true;
+						this.lastTimestamp = null;
+						this.animationFrame = requestAnimationFrame(this.boundAnimate);
+					}
+				}
+				/**
+				 * Stop the animation loop.
+				 */
+				stopAnimation() {
+					this.isAnimating = false;
+					if (this.animationFrame) {
+						cancelAnimationFrame(this.animationFrame);
+						this.animationFrame = null;
+					}
+				}
+				/**
+				 * Gradually slow down the marquee to a stop.
+				 */
+				slowDown() {
+					this.targetSpeed = 0;
+				}
+				/**
+				 * Gradually speed up the marquee to its original speed.
+				 */
+				speedUp() {
+					this.targetSpeed = this.options.speed;
+					this.startAnimation();
+				}
+				/**
+				 * Public method to pause the marquee.
+				 */
+				pause() {
+					this.slowDown();
+				}
+				/**
+				 * Public method to resume the marquee.
+				 */
+				play() {
+					this.speedUp();
+				}
+				/**
+				 * Public method to set the speed of the marquee.
+				 * @param {number} speed - The new speed value in pixels per second.
+				 */
+				setSpeed(speed) {
+					this.options.speed = speed;
+					this.targetSpeed = speed;
+					this.currentSpeed = speed;
+				}
+				/**
+				 * Destroy the marquee instance and clean up.
+				 */
+				destroy() {
+					this.stopAnimation();
+					this.container.innerHTML = "";
+					// Remove event listeners
+					if (this.observer) {
+						this.observer.disconnect();
+					}
+					document.removeEventListener(
+						"visibilitychange",
+						this.visibilityChangeHandler
+					);
+					window.removeEventListener("resize", this.resetDimensions);
+				}
+			}
+			// Support for CommonJS and browser environments
+			if (typeof module !== "undefined" && module.exports) {
+				module.exports = MarqueeKit;
+			} else {
+				window.MarqueeKit = MarqueeKit;
+			}
+		</script>
+		<script defer>
+			/**
+			 * Each instance can have unique settings.
+			 */
+			const images1 = [
+			"https://cdn.discordapp.com/attachments/787752901577277471/1358876766839635998/Mercedes-G-Class-4.png?ex=67f5701b&is=67f41e9b&hm=3c68f6eeb1820b5591ec8f74a764e37702612096a85ea871f1a294d0fd391681&",
+				"https://cdn.pixabay.com/photo/2023/11/04/07/40/cat-8364405_1280.jpg", "https://cdn.pixabay.com/photo/2024/03/16/10/02/spring-8636733_1280.jpg", "https://cdn.pixabay.com/photo/2024/11/03/22/57/dogs-9172481_1280.jpg", "https://cdn.pixabay.com/photo/2022/07/14/09/41/asian-woman-7320903_1280.jpg",
+				"https://cdn.pixabay.com/photo/2024/02/16/14/02/insect-8577624_1280.jpg",
+				"https://cdn.pixabay.com/photo/2023/02/04/16/29/boat-7767575_1280.jpg",
+				"https://cdn.pixabay.com/photo/2024/11/05/07/09/elephants-9175178_1280.jpg",
+				"https://cdn.pixabay.com/photo/2024/11/07/07/34/hydrangeas-9179924_1280.jpg",
+			];
+			// Example of basic marquee with default settings
+			new MarqueeKit("#basic-marquee", {
+				images: images1,
+				height: 200,
+				imageWidth: 150,
+				speed: 20,
+				gap: 20,
+				reverse: false,
+				imageScale: 0.98,
+				pauseOnHover: false,
+				borderRadius: 8
+			});
+		</script>
+		<style>
+			
+.marquee-wrapper {
+  max-width: 1200px; /* adjust this for a wider marquee (100% = full width) */
+  margin: 0 auto;
+  padding: 0 40px; /* remove padding to make the marquee wider */
+}
+
+.marquee-wrapper h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #212529;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.image-marquee {
+  margin-bottom: 60px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.image-marquee h2 {
+  margin-bottom: 20px;
+  color: #343a40;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.marquee-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  transition: height 0.3s ease;
+}
+
+.marquee-track {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.marquee-item {
+  flex: none;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.marquee-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: all 0.3s ease;
+}
+
+/* Spinner while images are loading */
+.marquee-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.marquee-loading::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Animations */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-container {
+    border-radius: 8px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  /* Remove Body if unneeded */
+  body {
+    background-color: #0a0a0a;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.05) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    color: #e1e1e1;
+  }
+  /* END Body */
+
+  .image-marquee {
+    background: rgba(15, 14, 14, 0.5);
+  }
+
+  .marquee-wrapper h1,
+  .image-marquee h2 {
+    color: #e1e1e1;
+  }
+
+  .marquee-container {
+    background: rgb(255 255 255 / 0.05);
+  }
+
+  .marquee-loading {
+    background: rgb(255 255 255 / 0.05);
+  }
+}
+
+
+
+/* Add a cool fade: */
+
+ .marquee-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.marquee-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    margin: 0 auto;
+    transition: height 0.3s ease;
+}
+
+.marquee-container::before,
+.marquee-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, 
+        rgba(255, 255, 255, 1) 0%, 
+        rgba(255, 255, 255, 0.95) 20%,
+        rgba(255, 255, 255, 0.85) 40%,
+        rgba(255, 255, 255, 0.5) 60%,
+        rgba(255, 255, 255, 0.2) 80%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, 
+        rgba(255, 255, 255, 1) 0%, 
+        rgba(255, 255, 255, 0.95) 20%,
+        rgba(255, 255, 255, 0.85) 40%,
+        rgba(255, 255, 255, 0.5) 60%,
+        rgba(255, 255, 255, 0.2) 80%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+@media (prefers-color-scheme: dark) {
+    .marquee-container::before {
+        background: linear-gradient(to right, 
+            rgba(15, 14, 14, 1) 0%,
+            rgba(15, 14, 14, 0.95) 20%,
+            rgba(15, 14, 14, 0.85) 40%,
+            rgba(15, 14, 14, 0.5) 60%,
+            rgba(15, 14, 14, 0.2) 80%,
+            rgba(15, 14, 14, 0) 100%
+        );
+    }
+
+    .marquee-container::after {
+        background: linear-gradient(to left, 
+            rgba(15, 14, 14, 1) 0%,
+            rgba(15, 14, 14, 0.95) 20%,
+            rgba(15, 14, 14, 0.85) 40%,
+            rgba(15, 14, 14, 0.5) 60%,
+            rgba(15, 14, 14, 0.2) 80%,
+            rgba(15, 14, 14, 0) 100%
+        );
+    }
+} 
+
+		</style> -->
+		<!-- end here -->
+	</body>
+	
 </html>

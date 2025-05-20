@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Images</title>
+</head>
+<body>
+
+	<div class="image-list"></div>
+
+	<!-- script -->
+	 <script>
+		const imageContainer = document.querySelector('.image-list');
+
+		// array of image URLs
+		const imageLinks = [
+		"https://i.pinimg.com/736x/d8/9f/4a/d89f4a89a167e80c451a349862afae58.jpg",
+		"https://i.pinimg.com/736x/9c/97/cf/9c97cffbd57f72ecc17a25a21e7d55db.jpg",
+		"https://i.pinimg.com/736x/77/fd/67/77fd677b221076a699055c4e753f3353.jpg",
+		"https://i.pinimg.com/736x/ff/c7/45/ffc74569c281b284f3f196bed5485d80.jpg",
+		];
+
+		// loop through the array and create image elements
+		imageLinks.forEach(link => {
+			const img = document.createElement('img');
+			img.src = link;
+			img.alt = 'Image';
+			imageContainer.appendChild(img);
+		});
+	 </script>
+
+	 <!-- css -->
+	 <style>
+		img{
+			width: 100%;
+			margin-bottom: 1em;
+		}
+
+		.image-list{
+			columns: 300px;
+		}
+	 </style>
+</body>
+</html>

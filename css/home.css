@@ -1,0 +1,9 @@
+
+img{
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+.image-list{
+	columns: 300px;
+}
