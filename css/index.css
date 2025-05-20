@@ -296,7 +296,7 @@ body.menu-opened {
     flex-direction: column;
     background-color: var(--dark-two);
     height: 100%;
-
+  background: var(--dark-one);
 }
 
 .expertise-title{
