@@ -793,7 +793,8 @@ ion-icon{
   position: fixed;
   bottom: 0 !important;
   padding-bottom: 10px;
-  padding-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   z-index: 100;
   width: 100%;
   background-color: var(--dark-one);
