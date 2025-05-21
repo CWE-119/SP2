@@ -124,27 +124,6 @@ h1{
   .dropdown.active .dropdown-arrow {
 	transform: rotate(180deg);
   }
-  
-  @media (max-width: 768px) {
-	.selection-buttons {
-	  flex-direction: column;
-	}
-	
-	.dropdown-menu {
-	  position: fixed;
-	  width: calc(100% - 40px);
-	  left: 20px !important;
-	  right: 20px !important;
-	  bottom: 20px;
-	  top: auto !important;
-	  transform: translateY(100%);
-	}
-	
-	.dropdown-menu.show {
-	  transform: translateY(0);
-	}
-  }
-
 
 img{
 	width: 100%;
@@ -166,3 +145,78 @@ video{
     margin-left: 8px;
     color: var(--red-wine);
 }
+
+.image-modal {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.9);
+  }
+  
+  .modal-content {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 1200px;
+	animation: zoom 0.3s ease-out;
+  }
+  
+  @keyframes zoom {
+	from {transform: scale(0.5); opacity: 0}
+	to {transform: scale(1); opacity: 1}
+  }
+  
+  .close-modal {
+	position: absolute;
+	top: 95px;
+	right: 45px;
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+	cursor: pointer;
+  }
+  
+  .close-modal:hover {
+	color: var(--red-wine);
+  }
+  
+  /* Add hover effect to media items */
+  .media-item {
+	cursor: pointer;
+	transition: transform 0.3s ease;
+  }
+  
+  .media-item:hover {
+	transform: scale(1.02);
+  }
+
+  @media (max-width: 768px) {
+	.selection-buttons {
+	  flex-direction: column;
+	}
+	
+	.dropdown-menu {
+	  position: fixed;
+	  width: calc(100% - 40px);
+	  left: 20px !important;
+	  right: 20px !important;
+	  bottom: 20px;
+	  top: auto !important;
+	  transform: translateY(100%);
+	}
+	
+	.dropdown-menu.show {
+	  transform: translateY(0);
+	}
+
+	.modal-content{
+		max-width: 1200px;
+	}
+  }
