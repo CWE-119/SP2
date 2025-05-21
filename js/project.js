@@ -181,27 +181,74 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	// Category selection
+	// document.querySelectorAll(".category-item").forEach((item) => {
+	// 	item.addEventListener("click", (e) => {
+	// 		const category = item.dataset.category;
+	// 		const isAll = category === "all";
+
+	// 		document
+	// 			.querySelectorAll(".category-item")
+	// 			.forEach((i) => i.classList.remove("active"));
+	// 		item.classList.add("active");
+
+	// 		if (isAll) {
+	// 			activeFilters.categories.clear();
+	// 		} else {
+	// 			activeFilters.categories.clear();
+	// 			activeFilters.categories.add(category);
+	// 		}
+
+	// 		applyFilters();
+	// 		document.querySelector(".dropdown-menu").classList.remove("show");
+	// 	});
+	// });
+
 	document.querySelectorAll(".category-item").forEach((item) => {
 		item.addEventListener("click", (e) => {
 			const category = item.dataset.category;
 			const isAll = category === "all";
 
-			document
-				.querySelectorAll(".category-item")
-				.forEach((i) => i.classList.remove("active"));
-			item.classList.add("active");
-
 			if (isAll) {
 				activeFilters.categories.clear();
+				document
+					.querySelectorAll(".category-item")
+					.forEach((i) => i.classList.remove("active"));
+				item.classList.add("active");
 			} else {
-				activeFilters.categories.clear();
-				activeFilters.categories.add(category);
+				// Toggle selection
+				item.classList.toggle("active");
+				if (item.classList.contains("active")) {
+					activeFilters.categories.add(category);
+				} else {
+					activeFilters.categories.delete(category);
+				}
+
+				// Remove 'all' selection if present
+				if (activeFilters.categories.size > 0) {
+					document
+						.querySelector('[data-category="all"]')
+						.classList.remove("active");
+				}
 			}
 
+			updateCategoryCount();
 			applyFilters();
 			document.querySelector(".dropdown-menu").classList.remove("show");
 		});
 	});
+
+	// Add count update function
+	function updateCategoryCount() {
+		const count = activeFilters.categories.size;
+		const countElement = document.querySelector(".category-count");
+		countElement.textContent = `(${count})`;
+
+		// Hide count when 0
+		countElement.style.display = count > 0 ? "inline-block" : "none";
+	}
+
+	// Initialize count display
+	updateCategoryCount();
 
 	// Media type selection
 	document.querySelectorAll(".selection-button").forEach((button) => {

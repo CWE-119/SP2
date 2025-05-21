@@ -7,3 +7,19 @@ img{
 .image-list{
 	columns: 300px;
 }
+
+.see-more{
+	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.see-more > a{
+	color: var(--red-wine);
+	font-weight: bold;
+	font-size: 25px;
+	padding: 25px;
+	background-color: var(--dark-two);
+	margin: 10px;
+	border-radius: 12px;
+}
