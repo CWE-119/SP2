@@ -8,71 +8,71 @@
 	--light: rgb(240, 240, 240);
 	--red-wine-dark:rgb(131, 0, 0);
 	--red-wine:rgb(181, 0, 0);
-  }
-  body{
+}
+body{
 	background-color: var(--dark-one);
   }
 
-  p,h2{
+p,h2{
 	color: var(--light);
 	font-size: 50px;
-  }
+}
 
-  .contact-us{
+.contact-us{
 	padding-right:10px ;
-  }
+}
 
-  .ps-4{
+.ps-4{
 	border-left-style: solid;
 	border-left-color: var(--red-wine);
-  }
-  .contact-us .contact-wrapper {
+}
+.contact-us .contact-wrapper {
 	border-radius: 25px;
 	padding: 40px 60px;
 	background-color: var(--dark-two);
 	height: 70vh;
-  }
-  
-  .contact-us .contact-wrapper input,
-  .contact-us .contact-wrapper textarea {
+}
+
+.contact-us .contact-wrapper input,
+.contact-us .contact-wrapper textarea {
 	background-color: var(--dark-one);
 	border: 1px solid var(--red-wine-dark);
 	border-radius: 10px;
 	padding: 6px 12px;
-  }
-  
-  .contact-us .contact-wrapper input:focus,
-  .contact-us .contact-wrapper textarea:focus{
+}
+
+.contact-us .contact-wrapper input:focus,
+.contact-us .contact-wrapper textarea:focus{
 	box-shadow: none;
-  }
-  
-  .contact-bg {
+}
+
+.contact-bg {
 	position: absolute;
 	right: -190px;
 	width: 400px;
 	filter:contrast(0) ;
-  }
-  
-  label{
+}
+
+label{
 	color:var(--light);
-  }
+}
 
-  input[type="radio"] {
+input[type="radio"] {
 	accent-color: var(--red-wine);
-  }
+}
 
 
-  .row2{
+.row2{
 	padding-top: 50px;
-  }
+}
 
-  .row2 > p {
+.row2 > p {
 	font-size: 40px;
-  }
+}
 
-  @media (max-width: 768px){
+@media (max-width: 768px){
 	p,h2, .row2 > p,h2{
 		color: var(--light);
 		font-size: small;
-	  }
-  }
+	}
+}

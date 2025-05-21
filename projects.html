@@ -108,61 +108,35 @@
 
 	<!-- work in progress -->
 	 <div class="work-progress">
-		<h1>work in progress</h1>
+		<div class="selection-button-section">
+			<div class="selection-buttons">
+				<button class="selection-button" data-filter-type="image">Images</button>
+				<button class="selection-button" data-filter-type="video">Videos</button>
+				<div class="dropdown">
+					<button class="dropdown-toggle">
+						<span>Categories</span>
+						<svg class="dropdown-arrow" viewBox="0 0 24 24" width="16" height="16">
+							<path fill="currentColor" d="M7 10l5 5 5-5z" />
+						</svg>
+					</button>
+					<div class="dropdown-menu">
+						<div class="category-item active" data-category="all">All</div>
+						<div class="category-item" data-category="1">Wedding</div>
+						<div class="category-item" data-category="2">Product Photoshoot</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Media Container -->
+		<div class="all-contents"></div>
+		
+
 	 </div>
 
 		<!-- footer-section -->
-		<footer class="footer">
-			<div class="footer-div">
-				<div class="footer-text">
-					<div class="header_text" style="background-color: transparent;">
-						<div class="header_bold">
-							<h1 style="background-color: transparent;">JOIN US --> <br> <span class="header_span"
-									style="background-color: transparent;">--> "CONTACT"</span> NOW</h1>
-						</div>
-					</div>
-				</div>
-				<div class="footer-socials">
-					<!-- fist two links -->
-					<section class="cloneable">
-						<div class="button-row">
-							<a data-cursor="Follow Us on Instagram" href="#" class="button instabg">
-								<p class="button-text insta"><ion-icon name="logo-instagram" style="color: #E1306C"></ion-icon>
-									Instagram</p>
-								<div class="button-bg"></div>
-							</a>
-							<a data-cursor="Watch our work here on Facebook" href="#" class="button secondary facebookbg">
-								<p class="button-text facebook"><ion-icon name="logo-facebook"
-										style="color: #4267B2"></ion-icon> Facebook</p>
-								<div class="button-bg"></div>
-							</a>
-						</div>
-						<div class="cursor">
-							<p>Learn more</p>
-						</div>
-					</section>
-					<!-- second two links -->
-					<section class="cloneable">
-						<div class="button-row">
-							<a data-cursor="Wooooohhhh!!! you are going to love this one " href="#" class="button youtubebg">
-								<p class="button-text youtube"><ion-icon name="logo-youtube" style="color: #E60023"></ion-icon>
-									Youtube</p>
-								<div class="button-bg"></div>
-							</a>
-							<a data-cursor="Serious business on Linkedin!?" href="#" class="button secondary linkedinbg">
-								<p class="button-text linkedin"><ion-icon name="logo-linkedin"
-										style="color: #0A66C2"></ion-icon> Linkedin</p>
-								<div class="button-bg"></div>
-							</a>
-						</div>
-					</section>
-				</div>
-			</div>
-			<div class="footer-policy">
-				<p>© 2023 Scene Steal. All rights reserved.</p>
-				<p>Privacy Policy</p>
-			</div>
-		</footer>
+		 <!-- footer deleted cuz it was causing some issue  -->
+		
 		<!-- scripts -->
 		<script src="/js/transition.js"></script>
 		<script src="/js/index.js"></script>
@@ -174,7 +148,68 @@
 		<script src="js/menu.js"></script>
 		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<script src="js/project.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const dropdowns = document.querySelectorAll('.dropdown');
 
+				dropdowns.forEach(dropdown => {
+					const toggle = dropdown.querySelector('.dropdown-toggle');
+					const menu = dropdown.querySelector('.dropdown-menu');
+					const arrow = dropdown.querySelector('.dropdown-arrow');
+					const tl = gsap.timeline({ paused: true });
+
+					tl.to(menu, {
+						opacity: 1,
+						visibility: 'visible',
+						y: 0,
+						duration: 0.3,
+						ease: 'power2.out'
+					});
+
+					toggle.addEventListener('click', (e) => {
+						e.stopPropagation();
+						const isActive = dropdown.classList.contains('active');
+
+						dropdowns.forEach(other => {
+							if (other !== dropdown && other.classList.contains('active')) {
+								other.classList.remove('active');
+								gsap.to(other.querySelector('.dropdown-menu'), {
+									opacity: 0,
+									visibility: 'hidden',
+									y: -10,
+									duration: 0.2
+								});
+							}
+						});
+
+						if (!isActive) {
+							dropdown.classList.add('active');
+							tl.play();
+						} else {
+							dropdown.classList.remove('active');
+							tl.reverse();
+						}
+					});
+				});
+
+				document.addEventListener('click', (e) => {
+					if (!e.target.closest('.dropdown')) {
+						dropdowns.forEach(dropdown => {
+							if (dropdown.classList.contains('active')) {
+								dropdown.classList.remove('active');
+								gsap.to(dropdown.querySelector('.dropdown-menu'), {
+									opacity: 0,
+									visibility: 'hidden',
+									y: -10,
+									duration: 0.2
+								});
+							}
+						});
+					}
+				});
+			});
+		</script>
 	</body>
 
 </html>
