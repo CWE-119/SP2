@@ -1,0 +1,14 @@
+.clients-main{
+	height: 100vh;
+	width: 100%;
+}
+
+.worked-with{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.worked-with > h1 {
+	color: var(--light);
+}
