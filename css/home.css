@@ -11,20 +11,22 @@ img{
 .see-more{
 	width: 100%;
 	display: flex;
-	flex-direction: row-reverse;
+	justify-content: center;
 }
 
 
 .see-more > a{
-	color: var(--red-wine);
+	color: var(--gray-light);
 	font-weight: bold;
 	font-size: 25px;
 	padding: 25px;
 	background-color: var(--dark-two);
 	margin: 10px;
 	border-radius: 12px;
+    transition: .1s cubic-bezier(0, 0.37, 1, 0.67);
 }
 
 .see-more > a:hover{
-	background-color: var(--gray-dark);
+	background-color: var(--red-wine-dark);
+	color: var(--light);
 }
