@@ -659,9 +659,9 @@ body.menu-opened {
   align-items: center;
   width: 99vw;
   height: 5em;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  /* padding: 0.8em 1em; */
+  /* padding-left: 1.5em;
+  padding-right: 1.5em; */
+  padding: 0.8em 1em;
   font-family: PP Neue Corp, Arial, sans-serif;
   font-size: 2.4rem;
   font-weight: 700;
