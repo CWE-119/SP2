@@ -804,20 +804,10 @@ ion-icon{
 .contact-items{
   display: flex;
   flex-direction: row;
-  width: 100%vw;
+  width: 100%;
   color: var(--light);
+  justify-content: space-evenly;
 
-}
-
-.items{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex:1;
-  /* border-right-style: solid;
-  border-right-color: var(--red-wine);
-  border-left-style: solid;
-  border-left-color: var(--red-wine); */
 }
 
 /* .item1{
@@ -842,11 +832,12 @@ ion-icon{
 }
 
 .item > a {
-  text-decoration: none;
-  font-size: medium;
-  font-weight: bold;
-  text-align: center;
+  width: 100%;
+  justify-self: center;
+  align-items: center;
+  color: var(--light);
 }
+
 @media (max-width: 768px) {
   .visibility{
     visibility: visible;
@@ -888,7 +879,7 @@ ion-icon{
   .socials {
     width: 100%;
     flex-direction: column;
-    gap: 8em;
+    /* gap: 8em; */
   }
 
   .header-menu h1 {
