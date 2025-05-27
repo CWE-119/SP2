@@ -14,6 +14,7 @@ img{
 	flex-direction: row-reverse;
 }
 
+
 .see-more > a{
 	color: var(--red-wine);
 	font-weight: bold;
@@ -22,4 +23,8 @@ img{
 	background-color: var(--dark-two);
 	margin: 10px;
 	border-radius: 12px;
+}
+
+.see-more > a:hover{
+	background-color: var(--gray-dark);
 }
