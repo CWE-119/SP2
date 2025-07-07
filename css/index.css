@@ -67,7 +67,8 @@ body.menu-opened {
 }
 
 .logo-div{
-	background-color: var(--dark-one);
+	  background-color: var(--light);
+    /* color:var(---light); */
     align-content: center;
     align-items: center;
     display: flex;
@@ -80,6 +81,10 @@ body.menu-opened {
     padding: 20px 32px;
     position: relative;
     width: 1px;
+    border-radius: 12px;
+    font-size: large;
+    font-weight: 800;
+    letter-spacing: 1.5px;
 }
 
 .links-div{

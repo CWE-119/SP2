@@ -159,6 +159,10 @@ video{
 	background-color: rgba(0,0,0,0.9);
   }
   
+	.all-contents{
+		margin: 10px;
+	}
+
   .modal-content {
 	margin: auto;
 	display: block;
@@ -195,7 +199,43 @@ video{
   
   .media-item:hover {
 	transform: scale(1.02);
-  }
+}
+
+
+.media-item iframe {
+    width: 100%;
+    aspect-ratio: 9/16; /* Vertical aspect ratio for Reels */
+    max-height: 800px;
+    border: none;
+    display: block;
+    margin-bottom: 1em;
+}
+
+/* Adjust for YouTube videos */
+.media-item[data-media-type="youtube"] iframe {
+    aspect-ratio: 16/9; /* Standard YouTube aspect ratio */
+}
+
+/* For Reels specifically */
+.media-item[data-media-type="reel"] iframe {
+    height: 700px; /* Fixed height for Reels */
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Existing video styles */
+video {
+    width: calc(100%/1);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 1em;
+}
+
+/* Update button text */
+.selection-button[data-filter-type="video"]::after {
+    content: " & Reels";
+}
+
 
   @media (max-width: 768px) {
 	.selection-buttons {
