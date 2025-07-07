@@ -11,7 +11,7 @@
 	width: 100%;
 }
 .selection-buttons{
-	width: calc(100%/9 *3);
+	/* width: calc(100%/9 *3); */
 	display: flex;
 	flex-direction: row;
 	gap: 10px;
@@ -243,7 +243,7 @@ video {
 
   @media (max-width: 768px) {
 	.selection-buttons {
-	  flex-direction: column;
+	  flex-direction: row;
 	}
 	
 	.dropdown-menu {

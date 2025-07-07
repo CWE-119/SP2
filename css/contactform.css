@@ -13,9 +13,14 @@ body{
 	background-color: var(--dark-one);
   }
 
+  .logo-div > p {
+	font-size: large;
+	font-weight: 800;
+  }
+
 p,h2{
 	color: var(--light);
-	font-size: 50px;
+	/* font-size: 50px; */
 }
 
 .contact-us{

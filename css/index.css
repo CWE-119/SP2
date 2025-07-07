@@ -67,8 +67,6 @@ body.menu-opened {
 }
 
 .logo-div{
-	  background-color: var(--red-wine-dark);
-    color:var(--light);
     align-content: center;
     align-items: center;
     display: flex;
@@ -89,11 +87,15 @@ body.menu-opened {
 }
 
 .logo-div > p{
-  padding-left: 5px;
+  color: var(--light);
+  /* background-color: var(--red-wine-dark); */
+  padding-left: 20px;
 }
 
 .logo-div > img {
-  width: 75px;
+  /* background-color: var(--red-wine-dark); */
+  border-radius: 12px;
+  width: 69px;
 }
 
 
