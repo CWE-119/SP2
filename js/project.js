@@ -398,6 +398,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			const mediaElement = document.createElement("div");
 			mediaElement.className = "media-item";
 			mediaElement.dataset.mediaType = item.mediaType;
+			mediaElement.style.breakInside = "avoid";
 
 			if (item.mediaType === "image") {
 				mediaElement.innerHTML = `
@@ -566,7 +567,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Update button text for video filter
 	const videoButton = document.querySelector('[data-filter-type="video"]');
 	if (videoButton) {
-		videoButton.textContent = "Videos & Shorts";
+		videoButton.textContent = "Videos";
 	}
 });
 
