@@ -1,15 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
-	gsap.registerPlugin(CustomEase);
-	CustomEase.create(
-		"hop",
-		"M0,0 C0.354,0 0.464,0.133 0.498,0.502 0.532,0.872 0.651,1 1,1"
-	);
+        if (!window.gsap || !window.CustomEase) {
+                console.warn("GSAP with CustomEase is required for menu interactions");
+                return;
+        }
 
-	const menuToggle = document.querySelector(".menu-toggle");
-	const menu = document.querySelector(".menu");
-	const links = document.querySelectorAll(".h-link");
-	const socialLinks = document.querySelectorAll(".socials p");
-	let isAnimating = false;
+        gsap.registerPlugin(CustomEase);
+        CustomEase.create(
+                "hop",
+                "M0,0 C0.354,0 0.464,0.133 0.498,0.502 0.532,0.872 0.651,1 1,1"
+        );
+
+        const menuToggle = document.querySelector(".menu-toggle");
+        const menu = document.querySelector(".menu");
+        const links = document.querySelectorAll(".h-link");
+        const socialLinks = document.querySelectorAll(".socials p");
+        let isAnimating = false;
+
+        if (!menuToggle || !menu) {
+                return;
+        }
 
 	const splitTextIntoSpans = (selector) => {
 		let elements = document.querySelectorAll(selector);
@@ -29,9 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	menuToggle.addEventListener("click", () => {
 		if (isAnimating) return;
 
-		if (menuToggle.classList.contains("closed")) {
-			menuToggle.classList.remove("closed");
-			menuToggle.classList.add("opened");
+                if (menuToggle.classList.contains("closed")) {
+                        menuToggle.classList.remove("closed");
+                        menuToggle.classList.add("opened");
+                        menuToggle.setAttribute("aria-expanded", "true");
+                        menuToggle.setAttribute("aria-label", "Close navigation");
 
 			isAnimating = true;
 
@@ -91,9 +102,11 @@ document.addEventListener("DOMContentLoaded", () => {
 				duration: 1.5,
 				ease: "power4.out",
 			});
-		} else {
-			menuToggle.classList.remove("opened");
-			menuToggle.classList.add("closed");
+                } else {
+                        menuToggle.classList.remove("opened");
+                        menuToggle.classList.add("closed");
+                        menuToggle.setAttribute("aria-expanded", "false");
+                        menuToggle.setAttribute("aria-label", "Open navigation");
 
 			isAnimating = true;
 

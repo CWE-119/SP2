@@ -25,7 +25,35 @@
 }
 
 body{
-  	background-color: var(--dark-one);
+        background-color: var(--dark-one);
+        color: var(--light);
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        min-height: 100vh;
+}
+
+main{
+        display: block;
+        width: 100%;
+}
+
+.skip-link{
+        position: absolute;
+        left: -999px;
+        top: 1rem;
+        background: var(--light);
+        color: var(--dark-one);
+        padding: 0.5rem 1rem;
+        border-radius: 999px;
+        font-weight: 600;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        z-index: 5000;
+}
+
+.skip-link:focus{
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 0 0 4px rgba(255,255,255,0.4);
 }
 
 html::-webkit-scrollbar {
@@ -193,14 +221,15 @@ body.menu-opened {
 }
 
 .header_moto{
-	width: 50%;
-	text-wrap: wrap;
-	color: var(--gray-light);
-	font-family: "Poppins", sans-serif;
-	background-color: transparent;
-	font-size: 20px;
-	font-weight: 300;
-	text-align: left;
+        max-width: 540px;
+        width: 100%;
+        text-wrap: wrap;
+        color: var(--gray-light);
+        font-family: "Poppins", sans-serif;
+        background-color: transparent;
+        font-size: 20px;
+        font-weight: 300;
+        text-align: left;
 }
 
 .image-container {
@@ -220,14 +249,25 @@ body.menu-opened {
 }
 
 .text{
-	color: var(--gray-light);
-	font-family: "Poppins", Inter ,sans-serif;
-	font-size: 20px;
-	font-weight: 300;
-	text-align: left;
-	height: 100%;
+        color: var(--gray-light);
+        font-family: "Poppins", Inter ,sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        text-align: left;
+        height: 100%;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.text-block{
+        margin: 80px auto;
+        max-width: 960px;
+        padding: 0 10px;
+}
+
+.text-block .section-title{
+        color: var(--light);
+        margin-bottom: 16px;
 }
 
 .about-div{
@@ -397,12 +437,18 @@ body.menu-opened {
   right: 2em;
   width: 120px;
   height: 60px;
-  background-color: var(--rgba0);
+  background-color: transparent;
+  border: none;
   border-radius: 8em;
   transition: width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   transform-origin: right;
   cursor: pointer;
   z-index: 2000;
+}
+
+.menu-toggle:focus-visible{
+  outline: 3px solid var(--light);
+  outline-offset: 4px;
 }
 
 .menu-toggle.opened {
