@@ -25,5 +25,8 @@ export const imageLinks = [
   "https://i.pinimg.com/originals/6a/02/cb/6a02cbf14430a9b4c9aea44315ba8bda.jpg",
   "https://i.pinimg.com/originals/7f/55/f5/7f55f5994669a8edebee611a365148ab.jpg",
   "https://i.pinimg.com/originals/bf/5c/11/bf5c11e1b74f18cee0b3b7669f8b9ee7.jpg",
-  "https://i.pinimg.com/originals/1a/dd/9a/1add9a5b847263d0cb24dba056669de2.jpg"
+  "https://i.pinimg.com/originals/1a/dd/9a/1add9a5b847263d0cb24dba056669de2.jpg",
+  "https://i.pinimg.com/736x/01/0a/1d/010a1de07b5c587c2ce1c563491b4a82.jpg",
+  "https://i.pinimg.com/736x/a7/ea/2b/a7ea2bf4d3ae1a1027563cd5268c97d4.jpg",
+  "https://i.pinimg.com/736x/53/6c/d4/536cd43280042dd093e7c86919e26e79.jpg"
 ];
